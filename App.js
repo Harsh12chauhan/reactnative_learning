@@ -1,125 +1,34 @@
-import { React } from "react";
+import { React,useState } from "react";
 import {
   View,
   Text,
   ScrollView,
   Button,
-  Image,
-  ImageBackground,
 } from "react-native";
-// import Login from "./components/Login";
-// import Signup from "./components/Signup";
 
 const App = () => {
-  function onClick() {
-    alert("Hello");
+  const name = "harsh";
+  const [count, setCount] = useState(1)
+  
+  function add() {
+    setCount(count+1)
   }
+  function sub() {
+    setCount(count-1)
+  }
+
   return (
     <ScrollView>
-      <View style={{ flex: 1 }}>
-        <View
-          style={{
-            flex: 1,
-            height: 100,
-            margin: 40,
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <ImageBackground
-            source={{ url: "https://i.stack.imgur.com/1dpmw.gif" }}
-            style={{justifyContent:"center", alignItems:"center" }}
-          >
-            <Text style={{fontSize: 50}}>Hello</Text>
-          </ImageBackground>
-        </View>
-        <View
-          style={{
-            flex: 2,
-            backgroundColor: "blue",
-            height: 100,
-            margin: 30,
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Text style={{ color: "white" }}>Blue Color</Text>
-        </View>
-        <View
-          style={{
-            flex: 3,
-            backgroundColor: "grey",
-            height: 100,
-            margin: 30,
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Text style={{ color: "white" }}>Grey Color</Text>
-        </View>
-        <View
-          style={{
-            flex: 4,
-            backgroundColor: "purple",
-            height: 100,
-            margin: 30,
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Image
-            source={require("./Image/img.png")}
-            style={{ height: 400, resizeMode: "contain" }}
-          ></Image>
-
-          <Text style={{ color: "white" }}>Purple Color</Text>
-        </View>
-        <View
-          style={{
-            flex: 5,
-            backgroundColor: "yellow",
-            height: 100,
-            margin: 30,
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Text style={{ color: "white" }}>Yellow Color</Text>
-        </View>
-        <View
-          style={{
-            flex: 6,
-            backgroundColor: "red",
-            height: 100,
-            margin: 30,
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Text style={{ color: "white" }}>Red Color</Text>
-          <Image
-            source={{ url: "https://i.stack.imgur.com/1dpmw.gif" }}
-            style={{ height: 100, resizeMode: "contain" }}
-          ></Image>
-        </View>
-        <View
-          style={{
-            flex: 7,
-            backgroundColor: "black",
-            height: 100,
-            margin: 30,
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Image
-            source={require("./Image/img.gif")}
-            style={{ height: 120, resizeMode: "contain" }}
-          ></Image>
-          <Text style={{ color: "white" }}> Black color</Text>
-        </View>
+      <View>
+        <Button title="" onPress={add} color="white" />
+        <Button title="" onPress={add} color="white" />
+        <Text style={{ fontSize: 40 }}> {name}</Text>
+        <Text style={{ fontSize: 40 }}> {count}</Text>
+        <Button title="+" onPress={add} color="#1E6738" />
+        <Button title="" onPress={add} color="white" />
+        <Button title="" onPress={add} color="white" />
+        <Button title="-" onPress={sub} color="red" />
       </View>
-      <Button title="Click" onPress={onClick} color="#1E6738" />
     </ScrollView>
   );
 };
