@@ -1,35 +1,30 @@
-import { React,useState } from "react";
-import {
-  View,
-  Text,
-  ScrollView,
-  Button,
-} from "react-native";
+import { StyleSheet, Text, View } from 'react-native';
+import Counter from './components/Counter';
 
-const App = () => {
-  const name = "harsh";
-  const [count, setCount] = useState(1)
-  
-  function add() {
-    setCount(count+1)
-  }
-  function sub() {
-    setCount(count-1)
-  }
-
+export default function App() {
+  const title1="Let's Start Counting...";
   return (
-    <ScrollView>
-      <View>
-        <Button title="" onPress={add} color="white" />
-        <Button title="" onPress={add} color="white" />
-        <Text style={{ fontSize: 40 }}> {name}</Text>
-        <Text style={{ fontSize: 40 }}> {count}</Text>
-        <Button title="+" onPress={add} color="#1E6738" />
-        <Button title="" onPress={add} color="white" />
-        <Button title="" onPress={add} color="white" />
-        <Button title="-" onPress={sub} color="red" />
-      </View>
-    </ScrollView>
+
+    <>
+    <View style={styles.container}>
+      <Text style={styles.textelement}>COUNTER</Text>
+    </View>
+    <Counter title1= {title1}/>
+    </>
   );
-};
-export default App;
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textelement:{
+    marginTop:20,
+    fontSize: 45,
+    borderBottomWidth:2,
+    borderBottomColor:"aqua"
+  }
+});
