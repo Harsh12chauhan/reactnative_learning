@@ -28,10 +28,34 @@ const App = () => {
         >
           <ImageBackground
             source={{ url: "https://i.stack.imgur.com/1dpmw.gif" }}
-            style={{flex:1,  justifyContent:"center", alignItems:"center"}}
+            style={{justifyContent:"center", alignItems:"center" }}
           >
             <Text style={{fontSize: 50}}>Hello</Text>
           </ImageBackground>
+        </View>
+        <View
+          style={{
+            flex: 2,
+            backgroundColor: "blue",
+            height: 100,
+            margin: 30,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Text style={{ color: "white" }}>Blue Color</Text>
+        </View>
+        <View
+          style={{
+            flex: 3,
+            backgroundColor: "grey",
+            height: 100,
+            margin: 30,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Text style={{ color: "white" }}>Grey Color</Text>
         </View>
         <View
           style={{
@@ -49,6 +73,18 @@ const App = () => {
           ></Image>
 
           <Text style={{ color: "white" }}>Purple Color</Text>
+        </View>
+        <View
+          style={{
+            flex: 5,
+            backgroundColor: "yellow",
+            height: 100,
+            margin: 30,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Text style={{ color: "white" }}>Yellow Color</Text>
         </View>
         <View
           style={{
