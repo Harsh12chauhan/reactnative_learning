@@ -1,15 +1,16 @@
 import { StyleSheet, Text, View } from 'react-native';
-import Counter from './components/Counter';
+// import Counter from './components/Counter';
+import Form from './components/Form';
 
 export default function App() {
-  const title1="Let's Start Counting...";
+  // const title1="Let's Start Counting...";
   return (
 
     <>
-    <View style={styles.container}>
-      <Text style={styles.textelement}>COUNTER</Text>
-    </View>
-    <Counter title1= {title1}/>
+     <View style={styles.container}>
+      {/* <Counter title1= {title1}/>*/}
+     <Form/>
+     </View>
     </>
   );
 }
