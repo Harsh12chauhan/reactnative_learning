@@ -1,14 +1,18 @@
 import { React, useState } from "react";
 import { View, Text, Button, StyleSheet, TextInput } from "react-native";
 
-const Form = () => {
+const Form = ( {navigation}) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmpassword, setConfirmPassword] = useState('')
+    
+    function navi() {
+           navigation.navigate('Counter')
+    }
 
     return (
-        <View >
+        <View>
             <Text style={styles.text1}>Form</Text>
             <Text style={styles.text2}>{name}</Text>
             <TextInput style={[styles.text2,styles.formborder]} placeholder='Name' onChangeText={(e) => { setName(e) }} />
@@ -19,7 +23,7 @@ const Form = () => {
             <Text style={styles.text2}>{confirmpassword}</Text>
             <TextInput style={[styles.text2,styles.formborder]} secureTextEntry={true} placeholder='Confirm Password' onChangeText={(e) => { setConfirmPassword(e) }} />
             <View style={styles.button1}>
-            <Button title='Submit' color={"black"}  />
+            <Button title='Submit' color={"black"} onPress={navi}  />
             </View>
         </View>
     )
